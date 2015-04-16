@@ -1,4 +1,4 @@
-cg.{-# LANGUAGE LambdaCase            #-}
+{-# LANGUAGE LambdaCase            #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
 {-# LANGUAGE OverloadedStrings     #-}
 {-# LANGUAGE RankNTypes            #-}
@@ -18,31 +18,31 @@ module Main (main) where
 
 import           Control.Applicative
 import           Control.Error
-import           Control.Lens              hiding ((<.>), (??))
+import           Control.Lens               hiding ((<.>), (??))
 import           Control.Monad
-import           Control.Monad.Trans.Except
-import Control.Monad.Error
+import           Control.Monad.Error
 import           Control.Monad.State
+import           Control.Monad.Trans.Except
 import           Data.Either
-import           Data.Jason                (eitherDecode)
-import           Data.List                 (nub, sortBy)
-import           Data.List.NonEmpty        (NonEmpty (..))
-import qualified Data.List.NonEmpty        as NonEmpty
+import           Data.Jason                 (eitherDecode)
+import           Data.List                  (nub, sortBy)
+import           Data.List.NonEmpty         (NonEmpty (..))
+import qualified Data.List.NonEmpty         as NonEmpty
 import           Data.Monoid
-import qualified Data.SemVer               as SemVer
+import qualified Data.SemVer                as SemVer
 import           Data.String
-import qualified Data.Text                 as Text
-import qualified Filesystem                as FS
-import           Filesystem.Path.CurrentOS hiding (encode)
+import qualified Data.Text                  as Text
+import qualified Filesystem                 as FS
+import           Filesystem.Path.CurrentOS  hiding (encode)
 import           Gen.IO
-import qualified Gen.JSON                  as JSON
-import qualified Gen.Library               as Library
+import qualified Gen.JSON                   as JSON
+import qualified Gen.Library                as Library
 import           Gen.Model
-import qualified Gen.Override              as Override
+import qualified Gen.Override               as Override
 import           Gen.Types
 import           Options.Applicative
-import           Prelude                   hiding (FilePath)
-import qualified Text.EDE                  as EDE
+import           Prelude                    hiding (FilePath)
+import qualified Text.EDE                   as EDE
 
 data Options = Options
     { _optOutput    :: FilePath

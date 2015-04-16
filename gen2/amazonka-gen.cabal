@@ -71,9 +71,9 @@ executable amazonka-gen
         , template-haskell
         , text
         , text-icu
-        , text-manipulate
+        , text-manipulate      >= 0.2
         , text-regex-replace
         , transformers
-        , transformers-compat
+--        , transformers-compat
         , unordered-containers
         , vector
