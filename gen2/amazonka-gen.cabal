@@ -72,7 +72,7 @@ executable amazonka-gen
         , text
         , text-icu
         , text-manipulate      >= 0.2
-        , text-regex-replace
+        , text-regex-replace   >= 0.1.0.1
         , transformers
 --        , transformers-compat
         , unordered-containers
